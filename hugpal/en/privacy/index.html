@@ -26,65 +26,90 @@
 <main class="wrap doc">
 <article>
 <h1>Privacy Policy</h1>
-<p class="lead">Hugpal doesn't collect any personal data about you or whoever you look after. There's no account, no ads and no tracking, and the app doesn't send your data to any server.</p>
-<ul class="summary"><li>No account</li><li>No data collected</li><li>No tracking, no ads</li><li>Your data stays on your iPhones</li></ul>
+<p class="lead">Hugpal has no account, no ads and no tracking. When you care together with family, records and photos are encrypted on your phone first, then pass through our server to your family's phones, and the server holds only ciphertext it can't read.</p>
+<ul class="summary"><li>No account</li><li>No tracking, no ads</li><li>End-to-end encrypted between family</li><li>The server stores only ciphertext</li></ul>
 
 <h2>Who this policy covers</h2>
-<p>The iPhone app Hugpal ("the app"), provided by the individual developer LI YAN-SHAN.</p>
+<p>The iPhone app Hugpal, provided by the individual developer LI YAN-SHAN.</p>
 
 <h2>Data stored on your iPhone</h2>
-<p>The records you log and the record types you add (including who logged them), the names, birthdays, photos and avatars of those you look after, the names, roles and avatars of the people who care with you, the emergency card (such as allergies, medical history, hospital and contacts), help numbers, house rules, supplies, calendar appointments, album photos and videos, and your settings are all stored only in the app's storage on your iPhone. What the widgets, Live Activity and controls need is kept in the app's own shared space on your iPhone, which we can't reach.</p>
+<p>The records you log in Hugpal and the record types you add (including who logged them), the names, birthdays, photos and avatars of those you look after, the names, roles and avatars of the people who care with you, the emergency card (such as allergies, medical history, hospital and contacts), help numbers, house rules, supplies, calendar appointments, album photos and videos, and your settings are all stored in the app's storage on your iPhone. What the widgets, Live Activity and controls need is kept in the app's own shared space on your iPhone.</p>
 <p>If you use iCloud Backup or back up your iPhone to a computer, this data is included in your own device backup according to your iOS settings. We have no access to your iPhone or your backups.</p>
 
-<h2>Camera, microphone and photos</h2>
-<p>The app uses the camera to take photos and videos (for records, handoff cards, the album and avatars) and to scan QR codes, and the microphone when you record a video. iOS asks for permission the first time. When you pick from Photos, the system picker gives the app only the items you choose, so no photo library permission is needed. Photos and videos stay in the app and are never uploaded. A handoff card or album video is saved to your photo library only when you tap Save (add-only; the app doesn't read the library).</p>
+<h2>Care together with family (through our server)</h2>
+<p>When you log on your own, your data never leaves your iPhone. Once you invite family to care together (Pro), each person or pet you look after has its own circle. Records, names, avatars, the emergency card and photos are encrypted on your phone with the circle's key before they go to our server, and your family's phones download and decrypt them. The keys stay on your phones. We can't read the content and can't decrypt it for you.</p>
+<p>The server can see and keeps only this:</p>
+<ul>
+<li>An ID for each phone and each circle (randomly made by the app, not your name or phone number) and each phone's public key</li>
+<li>Who is in which circle, and their role (main caregiver, caregiver, view-only)</li>
+<li>When each piece of ciphertext was uploaded, how big it is, and whether to notify family</li>
+<li>Push tokens, and the notification level each person chose</li>
+<li>Family Pro status: the ID of the phone that pays and the expiry date. We confirm it with transaction data signed by Apple and never receive your name, payment details or Apple Account</li>
+</ul>
+<p>The server can't see: what a record says, names and nicknames, who you look after, medicine, weight, notes, lists, photos, emergency info and phone numbers. Videos aren't uploaded. They stay on the phone that shot them and travel only when you merge in person.</p>
+<p>The server runs on OVHcloud in Canada, and connections go through Cloudflare. Encrypted photos are stored in OVHcloud's object storage in Canada. We don't log IP addresses (the rate limit that prevents abuse is counted in memory only and dropped within an hour), and we don't log push tokens, IDs or any content.</p>
+<p>Joining needs the main caregiver's phone to approve, and both phones show the same four digits for you to check.</p>
 
-<h2>Sharing with the people who care with you</h2>
-<p>Free lets you invite one person who can look only; any other sharing is Pro. When you invite someone, your phone shows a QR code that they scan with their camera, and the two phones connect directly while on the same Wi-Fi or close by (iOS asks for local network permission the first time). Both show the same four digits, and nothing is sent until you confirm. Records are encrypted with a key made for that one session and go straight from one iPhone to the other, through no server, and the connection closes when it's done.</p>
-<p>Each person or pet you look after is shared separately. What someone can see and change follows the role you give them (main carer, co-carer or can look only) and its end date, and is handled by the app on both phones. The album isn't shared unless you choose to.</p>
+<h2>Notifications</h2>
+<p>Reminders (timers, appointments, supplies) are scheduled by iOS on your iPhone. When family logs something or hands over to you, our server asks Apple's push service to send a notification to your phone. It carries only a fixed ID and no content. Your phone then downloads that piece of ciphertext, decrypts it on the phone, and shows it as "Mom handed Bean over to you". Each person chooses which notifications to get in My notices in the Together tab.</p>
+
+<h2>Merging in person</h2>
+<p>You can also scan a QR code in person. The two phones connect directly when they're on the same Wi-Fi or close by (iOS asks for local network permission the first time), and send data encrypted with a key made just for that session, through no server. It works with no internet.</p>
+
+<h2>Camera, microphone and photos</h2>
+<p>Hugpal uses the camera to take photos and videos (for records, handoff cards, the album and avatars) and to scan QR codes, and the microphone when you record a video. iOS asks for permission the first time. When you pick from Photos, the system picker gives the app only the items you choose, so no photo library permission is needed. A handoff card or album video is saved to your photo library only when you tap Save (add-only, the app doesn't read the library).</p>
 
 <h2>Moving to a new iPhone and backup files</h2>
-<p>When you open Move to a new iPhone on the old phone, the app first checks it's you with Face ID or your passcode. iOS tells the app only whether the check succeeded; the app never gets your face data. The move works like sharing, directly between the two iPhones.</p>
+<p>When you open Move to a new iPhone on the old phone, Hugpal first checks it's you with Face ID or your passcode. iOS tells the app only whether the check succeeded, and the app never gets your face data. The move goes directly between the two iPhones, and the old phone signs for the new one, so family doesn't need to be invited again.</p>
 <p>Backup files are encrypted with a password you choose and saved where you pick in Files. If you save to iCloud Drive, Apple's terms apply. We can't access your backup files and can't recover your password.</p>
 
 <h2>Calendar</h2>
-<p>The app uses your calendars only if you turn on On the iPhone's calendar too (iOS asks for permission the first time). The app makes a calendar of its own on your iPhone for your appointments and removes that whole calendar when you turn the option off. This data stays in your device's calendar and syncs according to your iCloud Calendar settings.</p>
-
-<h2>Reminders</h2>
-<p>Notifications are scheduled by iOS on your iPhone and go through no server.</p>
+<p>Hugpal uses your calendars only if you turn on Add to the iPhone's calendar (iOS asks for permission the first time). The app makes a calendar of its own on your iPhone for your appointments and removes that whole calendar when you turn the option off.</p>
 
 <h2>Handoff cards and sharing</h2>
-<p>Handoff cards and album videos are made on your iPhone and leave it only when you tap Share or Save, to whoever you choose. You pick which fields a handoff card carries.</p>
+<p>Handoff cards and album videos are made on your iPhone and leave it only when you tap Share or Save, to whoever you choose, through no server of ours. You pick which fields a handoff card carries.</p>
 
 <h2>Siri, Shortcuts, widgets and Control Center</h2>
 <p>You can log or start a timer with Siri, Shortcuts, widgets and Control Center, all handled on your iPhone. When you use Siri, what you say is processed by Apple's Siri under Apple's privacy policy.</p>
 
 <h2>Purchases</h2>
-<p>Pro subscriptions are handled by Apple. We never receive your name, payment details or Apple Account. The app only checks with Apple whether you have Pro. See Apple's privacy policy for how Apple handles purchase data.</p>
+<p>Pro subscriptions are handled by Apple. We never receive your name, payment details or Apple Account. The app checks with Apple whether you have Pro. When you care together, the phone that pays sends the transaction data signed by Apple to the server so the whole family can use it.</p>
 
 <h2>Crashes and diagnostics</h2>
-<p>If you choose to share with app developers in iPhone Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements, Apple gives us crash reports and usage statistics that don't identify you. We use them only to fix bugs.</p>
+<p>If you choose to share with app developers in iPhone Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements, Apple gives us crash reports and usage statistics that don't identify you. We use them only to fix bugs. The app has no analytics or advertising code.</p>
 
-<h2>Deleting your data</h2>
+<h2>How long we keep data and how to delete it</h2>
 <ul>
-<li>Delete any record in These days; you can undo right after.</li>
-<li>Deleting the app deletes all of its data on your iPhone, along with its notifications, Live Activity and widgets.</li>
-<li>If you turned on the calendar option, turn it off in the app first so the app's calendar is removed too.</li>
-<li>Records already sent to someone else's phone are deleted in the app on that phone.</li>
+<li>You can delete any record, and undo right after. Deletes sync to your family's phones, and photos on the record are deleted from the server.</li>
+<li>When you leave a person's or pet's circle, or the main caregiver removes you, your phone can no longer read or write, and the circle gets a new key. Records already on your phone are deleted on your phone.</li>
+<li>When the main caregiver deletes someone they look after, once every family phone has received it, the circle, records and photos on the server are deleted within 90 days at most. When the last person leaves, the server deletes the whole circle right away.</li>
+<li>For a phone that hasn't connected to the server in 180 days, the server automatically deletes its registration and push token.</li>
+<li>After family Pro ends, records keep syncing and photos on the server are deleted after 90 days, while everything on phones stays. If you renew, nothing is deleted.</li>
+<li>The server makes one encrypted backup a day and keeps it for 7 days, so deleted data stays in backups for at most 7 more days.</li>
+<li>Deleting Hugpal deletes its data on this iPhone. If you turned on the calendar option, turn it off in the app first so the app's calendar is removed too. To delete this phone's data on the server, go to Settings > New iPhone and backups in Hugpal and tap Delete my data on the server. This phone leaves caring together on the server and what only you had there is deleted. The records stay on this iPhone and on your family's. Do this before deleting the app.</li>
 </ul>
 
+<h2>What we can't do</h2>
+<p>Records your family has already seen and kept on their phones can't be taken back. If every phone that cares together is lost, nobody can open the ciphertext on the server and we can't recover it, so please make a backup file.</p>
+
 <h2>Children</h2>
-<p>The app is for adults who look after others. Data about a baby or child is entered by the family and stays only on the iPhones of the people who care for them. We don't collect anyone's data, children's included.</p>
+<p>Hugpal is for adults who look after others. Data about a baby or child is entered by the parent or caregiver and shown only to the family they invite. We can't read it and never use it for anything else.</p>
 
 <h2>Your rights</h2>
-<p>Because we don't collect personal data about you or those you look after, there is nothing for us to access, correct or delete. If you have any privacy question, please write to us.</p>
+<p>We keep only the IDs and ciphertext listed above, and they can't identify you. You can leave a circle, delete someone you look after, or delete your data on the server in Settings > New iPhone and backups at any time. If you have any privacy question, please write to us and we'll reply within 30 days.</p>
+
+<h2>Consumer health data (Washington and other US states)</h2>
+<p>Care records can count as consumer health data under Washington's My Health My Data Act and similar state laws. We handle them only to sync between your family's phones, and what we handle is ciphertext we can't read. We don't sell it, share it with third parties or use it for advertising. The only processors are OVHcloud (hosting and object storage in Canada), Cloudflare (connections) and Apple (push notifications and purchases). You can delete your data in the app using the steps above, or write to us to ask us to confirm what we hold, delete it or withdraw your consent. We'll reply within 45 days, and if you disagree with our answer, you can write to us again to appeal.</p>
+
+<h2>Data breaches</h2>
+<p>If the server is breached, what leaks would be ciphertext and the IDs listed above. We'll investigate as soon as we know, notify affected people and authorities within the time limits of the laws that apply, and explain on this page.</p>
 
 <h2>Changes to this policy</h2>
-<p>If the way the app handles data changes, for example when syncing from anywhere is added, we'll update this page and the date below first. Before collecting any data, we'll tell you in the app and ask for your consent.</p>
+<p>If the way Hugpal handles data changes, we'll update this page and the date below first, and tell you in the app about important changes.</p>
 
 <h2>Contact</h2>
 <p>LI YAN-SHAN: <a href="mailto:boundless2@protonmail.com">boundless2@protonmail.com</a></p>
-<p class="updated">Last updated: November 8, 2026</p>
+<p class="updated">Last updated: November 25, 2026</p>
 </article>
 </main>
 <footer class="site">
